@@ -1,8 +1,9 @@
-### Gerar módulo
-ng g m pasta/desejada/nome-modulo
+Ao clonar o projeto: `executar npm install`
 
-### Gerar componente
-ng g c pasta/desejada/nome-componente
+Para executar o projeto: `ng serve`
 
-### Gerar service
-ng g s pasta/desejada/nome-service
+Gerar módulo: `ng g m pasta/desejada/nome-modulo`
+
+Gerar componente: `ng g c pasta/desejada/nome-componente`
+
+Gerar service: `ng g s pasta/desejada/nome-service`
