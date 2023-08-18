@@ -9,20 +9,20 @@
                 name="nome"
                 type="text"
             >
-
+            
             <div *ngIf="form.controls['nome'].touched || submitted">
                 <div *ngIf="form.controls['nome'].hasError('required')">
                     <span class="text-xs absolute text-red-600">
                         Nome é obrigatório
                     </span>
                 </div>
-
+                
                 <div *ngIf="form.controls['nome'].hasError('maxlength')">
                     <span class="text-xs absolute text-red-600">
                         Nome deve ter no máximo 20 caracteres
                     </span>
                 </div>
-
+                
                 <div *ngIf="form.controls['nome'].hasError('minlength')">
                     <span class="text-xs absolute text-red-600">
                         Nome deve ter no mínimo 3 caracteres
@@ -30,7 +30,53 @@
                 </div>
             </div>
         </div>
-
+        
+        <div class="flex mb-8 flex-col">
+            <label for="cep">CEP:</label>
+            <input
+                type="text"
+                id="cep"
+                name="cep"
+                formControlName="cep"
+                class="border border-slate-600 rounded p-2"
+                (change)="buscarEndereco()"
+            >
+        </div>
+        
+        <div class="flex mb-8 flex-col">
+            <label for="rua">Rua:</label>
+            <input
+                type="text"
+                id="rua"
+                name="rua"
+                formControlName="rua"
+                class="border border-slate-600 rounded p-2"
+            >
+        </div>
+        
+        <div class="flex mb-8 flex-col">
+            <label for="bairro">Bairro:</label>
+            <input
+                type="text"
+                id="bairro"
+                name="bairro"
+                formControlName="bairro"
+                class="border border-slate-600 rounded p-2"
+            >
+        </div>
+        
+        <div class="flex mb-8 flex-col">
+            <label for="numero">Número:</label>
+            <input
+                #numero
+                type="text"
+                id="numero"
+                name="numero"
+                formControlName="numero"
+                class="border border-slate-600 rounded p-2"
+            >
+        </div>
+        
         <button class="rounded bg-sky-400 py-1 px-4" type="submit">
             Salvar
         </button>
