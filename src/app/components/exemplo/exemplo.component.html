@@ -1,0 +1,38 @@
+<section class="p-3">
+    <form [formGroup]="form" (ngSubmit)="salvar()">
+        <div class="flex mb-8 flex-col relative">
+            <label for="nome">Nome:</label>
+            <input
+                class="border border-slate-600 rounded p-2"
+                formControlName="nome"
+                id="nome"
+                name="nome"
+                type="text"
+            >
+
+            <div *ngIf="form.controls['nome'].touched || submitted">
+                <div *ngIf="form.controls['nome'].hasError('required')">
+                    <span class="text-xs absolute text-red-600">
+                        Nome é obrigatório
+                    </span>
+                </div>
+
+                <div *ngIf="form.controls['nome'].hasError('maxlength')">
+                    <span class="text-xs absolute text-red-600">
+                        Nome deve ter no máximo 20 caracteres
+                    </span>
+                </div>
+
+                <div *ngIf="form.controls['nome'].hasError('minlength')">
+                    <span class="text-xs absolute text-red-600">
+                        Nome deve ter no mínimo 3 caracteres
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <button class="rounded bg-sky-400 py-1 px-4" type="submit">
+            Salvar
+        </button>
+    </form>
+</section>
