@@ -1,4 +1,4 @@
-Ao clonar o projeto: `executar npm install`
+Ao clonar o projeto: executar `npm install`
 
 Para executar o projeto: `ng serve`
 
